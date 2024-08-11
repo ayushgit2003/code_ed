@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="contest-container">
+  <div class="header">
+    <h1>Contest</h1>
+    <button mat-button (click)="openCreateContestDialog()" class="create-contest-button">Create Contest</button>
+  </div>
+  <p>Welcome to the contest section. Here you can find all the current and upcoming contests.</p>
+  
+  <!-- Example structure for contests -->
+  <div class="contest-item" *ngFor="let contest of contests">
+    <h2>{{ contest.title }}</h2>
+    <p>{{ contest.description }}</p>
+    <a [routerLink]="['/contest', contest.id]">View Details</a>
+  </div>
+</div>

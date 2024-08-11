@@ -1,0 +1,51 @@
+ 
+
+.contest-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-contest-button {
+  background-color: black;
+  color: yellow;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.create-contest-button:hover {
+  background-color: #0056b3;
+}
+
+.contest-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contest-item h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.contest-item p {
+  margin: 10px 0;
+}
+
+.contest-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contest-item a:hover {
+  text-decoration: underline;
+}

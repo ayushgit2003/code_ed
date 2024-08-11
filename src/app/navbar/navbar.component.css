@@ -1,0 +1,72 @@
+/* .myNavbar {
+    font-size: calc(1vw + 0.40vh + 0.40em);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1.40vh;
+    padding-bottom: 1.40vh;
+    border-bottom: 0.50px solid silver;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  
+    background-color: white;
+}
+
+.logo {
+    height: 1.40em;
+    width: 1.80em;
+    align-self: stretch;
+    vertical-align: middle;
+}
+
+a{
+    color: rgb(40, 40, 40);
+    text-decoration: none;
+    align-self: stretch;
+    vertical-align: middle;
+}
+
+a:visited {
+    color: rgb(40, 40, 40);
+}
+
+a:hover {
+    color: rgb(255, 166, 0);
+}  */
+
+.myNavbar {
+    font-size: calc(0.5vw + 0.60vh + 0.40em);
+    padding-left: 2vw;  /* Increased padding for wider navbar */
+    padding-right: 2vw; /* Increased padding for wider navbar */
+    padding-top: 2vh;   /* Increased padding for taller navbar */
+    padding-bottom: 2vh;
+    border-bottom: 0.50px solid silver;
+    font-family: 'Roboto', sans-serif;
+    background-color: black; /* Set background color to black */
+    color: yellow; /* Set font color to yellow */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    height: 1.40em;
+    width: 1.80em;
+    align-self: stretch;
+    vertical-align: middle;
+}
+
+a {
+    color: yellow; /* Set link color to yellow */
+    text-decoration: none;
+    align-self: stretch;
+    vertical-align: middle;
+}
+
+a:visited {
+    color: yellow; /* Set visited link color to yellow */
+}
+
+a:hover {
+    color: rgb(255, 166, 0); /* Set hover color to orange */
+}

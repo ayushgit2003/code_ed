@@ -1,0 +1,71 @@
+<h1 mat-dialog-title>Create Contest</h1>
+<mat-dialog-content style="overflow: auto; max-height: 500px; background-color: #333; color: white;">
+  <div style="padding: 16px;">
+    <form [formGroup]="contestForm">
+      <div style="width: 100%; margin-bottom: 16px;">
+        <h3 style="font-size: 22px; font-family: Arial, sans-serif; color: white; margin-bottom: 8px;">Contest Name</h3>
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <input matInput formControlName="contestName" style="font-size:20px; font-family: Arial, sans-serif; color: white; padding: 2px;">
+        </mat-form-field>
+      </div>
+      <div style="width: 100%; margin-bottom: 16px;">
+        <h3 style="font-size: 22px; font-family: Arial, sans-serif; color: white; margin-bottom: 8px;">Description</h3>
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <textarea matInput formControlName="description" style="font-size: 20px; font-family: Arial, sans-serif; color: white; padding: 2px;"></textarea>
+        </mat-form-field>
+      </div>
+      <div style="width: 100%; margin-bottom: 16px;">
+        <h3 style="font-size: 22px; font-family: Arial, sans-serif; color: white; margin-bottom: 8px;">Start Date & Time</h3>
+        <div style="display: flex;">
+          <mat-form-field appearance="fill" style="flex: 1; margin-right: 8px;">
+            <input matInput [matDatepicker]="startPicker" formControlName="startDate" placeholder="Select date" style="font-size: 20px; font-family: Arial, sans-serif; color: white;">
+            <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+            <mat-datepicker #startPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="fill" style="flex: 1;">
+            <input matInput formControlName="startTime" placeholder="HH:MM" style="font-size: 20px; font-family: Arial, sans-serif; color: white;" type="time">
+          </mat-form-field>
+        </div>
+      </div>
+      <div style="width: 100%; margin-bottom: 16px;">
+        <h3 style="font-size: 22px; font-family: Arial, sans-serif; color: white; margin-bottom: 8px;">End Date & Time</h3>
+        <div style="display: flex;">
+          <mat-form-field appearance="fill" style="flex: 1; margin-right: 8px;">
+            <input matInput [matDatepicker]="endPicker" formControlName="endDate" placeholder="Select date" style="font-size: 20px; font-family: Arial, sans-serif; color: white;">
+            <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+            <mat-datepicker #endPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="fill" style="flex: 1;">
+            <input matInput formControlName="endTime" placeholder="HH:MM" style="font-size: 20px; font-family: Arial, sans-serif; color: white;" type="time">
+          </mat-form-field>
+        </div>
+      </div>
+      <div style="width: 100%; margin-bottom: 16px;">
+        <h3 style="font-size: 22px; font-family: Arial, sans-serif; color: white; margin-bottom: 8px;">Organizer</h3>
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <input matInput formControlName="organizer" style="font-size: 20px; font-family: Arial, sans-serif; color: white; padding: 2px;">
+        </mat-form-field>
+      </div>
+
+      <!-- Add the three buttons -->
+      <div style="margin-bottom: 16px; display: flex; justify-content: space-between;">
+        <button mat-raised-button color="primary" style="font-size: 16px; padding: 8px 16px;">Ques 1</button>
+        <button mat-raised-button color="accent" style="font-size: 16px; padding: 8px 16px;">Ques 2</button>
+        <button mat-raised-button color="warn" style="font-size: 16px; padding: 8px 16px;">Ques 3</button>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end" style="padding: 16px;">
+  <button mat-button 
+          (click)="onCancel()" 
+          style="font-size: 16px; padding: 12px 24px; border-radius: 4px; color: #333; border: 1px solid #ccc; background-color: #f8f9fa; margin-right: 8px;">
+    Cancel
+  </button>
+  <button mat-button 
+          color="primary" 
+          (click)="onCreateContest()" 
+          style="font-size: 16px; padding: 12px 24px; border-radius: 4px; color: white; border: none; background-color: #007bff;">
+    Create
+  </button>
+</mat-dialog-actions>
